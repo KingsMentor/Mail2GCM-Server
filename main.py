@@ -69,7 +69,7 @@ class PhoneIncomingReceiver(webapp2.RequestHandler):
     def post(self):
         deviceId = self.request.get("device_id")
         email = str(self.request.get("email"))
-        recipient = email if len(email.strip()) > 0 else "nosakharebelvi@gmail.com"
+        recipient = email if len(email.strip()) > 0 else "example@gmail.com"
         pushKey = self.request.get("push_key")
         message = self.request.get("message")
         CommonOperations.cacheDevice(deviceId, pushKey)
